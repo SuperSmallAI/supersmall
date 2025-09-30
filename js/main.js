@@ -1,14 +1,41 @@
 // Lightweight replacement for Webflow JS - ~5KB vs 556KB
 
 // Mobile Navigation Toggle
-const navToggle = document.querySelector('.navigation-mobile-menu');
-const navMenu = document.querySelector('.navigation-menu');
+document.addEventListener('DOMContentLoaded', () => {
+  const navToggle = document.querySelector('.navigation-mobile-menu');
+  const navMenu = document.querySelector('.navigation-menu');
 
-if (navToggle && navMenu) {
-  navToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('open');
-  });
-}
+  console.log('Nav toggle:', navToggle);
+  console.log('Nav menu:', navMenu);
+
+  if (navToggle && navMenu) {
+    navToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      console.log('Hamburger clicked!');
+      navMenu.classList.toggle('open');
+      navToggle.classList.toggle('active');
+      console.log('Menu has open class:', navMenu.classList.contains('open'));
+    });
+
+    // Close menu when clicking on a navigation link
+    const navLinks = navMenu.querySelectorAll('.navigation-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('open');
+        navToggle.classList.remove('active');
+      });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+        navMenu.classList.remove('open');
+        navToggle.classList.remove('active');
+      }
+    });
+  }
+});
 
 // Fade-in animations on scroll (exclude hero heading which has its own animation)
 const fadeElements = document.querySelectorAll('[data-w-id]:not(.hero-heading-animated)');

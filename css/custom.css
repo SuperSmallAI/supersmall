@@ -12,9 +12,19 @@
 }
 
 @media (max-width: 991px) {
+  .navigation-wrapper {
+    position: relative;
+    z-index: 1001;
+  }
+
+  .navigation {
+    position: relative;
+    z-index: 1002;
+  }
+
   .navigation-menu {
     position: fixed;
-    top: 60px;
+    top: 80px;
     left: 0;
     right: 0;
     background: white;
@@ -22,6 +32,9 @@
     overflow: hidden;
     opacity: 0;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 999;
+    display: flex !important;
+    flex-direction: column;
   }
 
   .navigation-menu.open {
@@ -33,6 +46,12 @@
   .navigation-link {
     display: block;
     padding: 12px 0;
+    width: 100%;
+  }
+
+  .navigation-mobile-menu {
+    cursor: pointer;
+    display: block;
   }
 }
 
@@ -457,4 +476,205 @@
   background: #7d2f3d;
   transform: translateY(-2px);
   box-shadow: 0 4px 16px rgba(156, 59, 77, 0.3);
+}
+
+/* Instructors Page Styles - Comic Book Style */
+.instructors-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2em 1em;
+}
+
+.team {
+  padding: 2em 0;
+  margin: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3em;
+}
+
+.member {
+  position: relative;
+  background: #fff;
+  border: 4px solid #000;
+  box-shadow: 8px 8px 0 #000;
+  padding: 2em;
+  transition: all 0.3s ease;
+  overflow: visible;
+}
+
+.member:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 12px 12px 0 #000;
+}
+
+.member:nth-of-type(even) {
+  background: #fff;
+}
+
+.thumb {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto 2em;
+  border: 4px solid #000;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  background: #9c3b4d;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.member:hover .thumb img {
+  transform: scale(1.15);
+}
+
+.member:hover .description h3 {
+  transform: scale(1.1);
+}
+
+.co-founder:hover::after {
+  transform: rotate(-3deg) scale(1.2);
+  box-shadow: 3px 3px 0 #000;
+}
+
+.co-founder:nth-of-type(even):hover::after {
+  transform: rotate(3deg) scale(1.2);
+}
+
+.description {
+  text-align: center;
+}
+
+.description h3 {
+  font-family: "Bangers", system-ui;
+  font-size: 2.2em;
+  color: #9c3b4d;
+  margin: 0 0 0.5em 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.description h3::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 4px;
+  background: #9c3b4d;
+}
+
+.description p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  padding: 0 1em;
+  margin: 1.5em 0 0;
+}
+
+.instructor-linkedin {
+  display: inline-block;
+  margin-top: 1.5em;
+  padding: 0.6em 1.5em;
+  background: #0077b5;
+  color: #fff;
+  text-decoration: none;
+  border: 3px solid #000;
+  box-shadow: 3px 3px 0 #000;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.instructor-linkedin:hover {
+  background: #005885;
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 #000;
+}
+
+.instructor-linkedin svg {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 6px;
+  fill: currentColor;
+}
+
+.co-founder::after {
+  content: "CO-FOUNDER";
+  position: absolute;
+  top: -15px;
+  right: 20px;
+  background: #FFD700;
+  color: #000;
+  font-family: "Bangers", system-ui;
+  font-size: 0.9em;
+  padding: 0.3em 0.8em 0.2em;
+  border: 3px solid #000;
+  box-shadow: 2px 2px 0 #000;
+  transform: rotate(-3deg);
+  letter-spacing: 1px;
+  z-index: 10;
+}
+
+.co-founder:nth-of-type(even)::after {
+  right: auto;
+  left: 20px;
+  transform: rotate(3deg);
+}
+
+/* Add transition to CO-FOUNDER badge */
+.co-founder::after {
+  transition: all 0.3s ease;
+}
+
+/* Mobile responsive */
+@media (max-width: 991px) {
+  .team {
+    grid-template-columns: 1fr;
+    gap: 2.5em;
+    padding: 1em 0;
+  }
+
+  .member {
+    padding: 1.5em;
+  }
+
+  .thumb {
+    width: 180px;
+    height: 180px;
+  }
+
+  .description h3 {
+    font-size: 1.8em;
+  }
+
+  .description p {
+    padding: 0 0.5em;
+    font-size: 15px;
+  }
+
+  .co-founder::after {
+    top: -12px;
+    right: 15px;
+    font-size: 0.8em;
+  }
+
+  .co-founder:nth-of-type(even)::after {
+    left: 15px;
+  }
 }
