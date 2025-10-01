@@ -172,9 +172,11 @@
       <div class="contact-right">
         <div class="contact-form-wrapper">
           <div class="form-block w-form">
-            <form name="supersmall-application" method="POST" netlify action="https://buy.stripe.com/4gM5kxglt76k4A33m34AU00" class="column-regular-4">
+            <form name="supersmall-application" method="POST" netlify action="/form-success.html" class="column-regular-4">
               <!-- Hidden field for Netlify -->
               <input type="hidden" name="form-name" value="supersmall-application" />
+              <!-- Stripe redirect URL -->
+              <input type="hidden" name="stripe-url" value="https://buy.stripe.com/4gM5kxglt76k4A33m34AU00" />
               <div class="application-form-section">
                 <h3 class="form-section-heading bangers-regular">Contact Information</h3>
                 <div class="w-layout-grid form-grid">
