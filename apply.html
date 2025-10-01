@@ -172,27 +172,29 @@
       <div class="contact-right">
         <div class="contact-form-wrapper">
           <div class="form-block w-form">
-            <form id="wf-form-How-did-you-hear-about-us" name="wf-form-How-did-you-hear-about-us" data-name="How did you hear about us?" redirect="https://buy.stripe.com/4gM5kxglt76k4A33m34AU00" data-redirect="https://buy.stripe.com/4gM5kxglt76k4A33m34AU00" method="get" class="column-regular-4" data-wf-page-id="68dbe80553f11390148e7ce7" data-wf-element-id="dbd5b6f8-a87b-781c-ce17-6298257c3793">
+            <form name="supersmall-application" method="POST" netlify action="https://buy.stripe.com/4gM5kxglt76k4A33m34AU00" class="column-regular-4">
+              <!-- Hidden field for Netlify -->
+              <input type="hidden" name="form-name" value="supersmall-application" />
               <div class="application-form-section">
                 <h3 class="form-section-heading bangers-regular">Contact Information</h3>
                 <div class="w-layout-grid form-grid">
                   <div class="column-x-small-4">
                     <label for="name" class="form-field-label-styled">Your Name <span class="required-star">*</span></label>
-                    <input class="form-text-field-styled w-input" maxlength="256" name="Name" data-name="Name" placeholder="John Doe" type="text" id="Name" required>
+                    <input class="form-text-field-styled w-input" maxlength="256" name="name" placeholder="John Doe" type="text" id="name" required>
                   </div>
                   <div class="column-x-small-4">
                     <label for="phone" class="form-field-label-styled">Phone Number <span class="required-star">*</span></label>
-                    <input class="form-text-field-styled w-input" maxlength="256" name="Phone" data-name="Phone" placeholder="(555) 000-0000" type="tel" id="Phone" required>
+                    <input class="form-text-field-styled w-input" maxlength="256" name="phone" placeholder="(555) 000-0000" type="tel" id="phone" required>
                   </div>
                 </div>
                 <div class="w-layout-grid form-grid">
                   <div class="column-x-small-4">
                     <label for="email" class="form-field-label-styled">Email <span class="required-star">*</span></label>
-                    <input class="form-text-field-styled w-input" maxlength="256" name="Email" data-name="Email" placeholder="you@example.com" type="email" id="Email" required>
+                    <input class="form-text-field-styled w-input" maxlength="256" name="email" placeholder="you@example.com" type="email" id="email" required>
                   </div>
                   <div class="column-x-small-4">
                     <label for="linkedin" class="form-field-label-styled">LinkedIn Profile <span class="required-star">*</span></label>
-                    <input class="form-text-field-styled w-input" maxlength="256" name="LinkedIn" data-name="LinkedIn" placeholder="linkedin.com/in/yourprofile" type="url" id="LinkedIn" required>
+                    <input class="form-text-field-styled w-input" maxlength="256" name="linkedin" placeholder="linkedin.com/in/yourprofile" type="url" id="linkedin" required>
                   </div>
                 </div>
               </div>
@@ -202,40 +204,40 @@
                 <div class="column-x-small-4">
                   <label for="situation" class="form-field-label-styled">What's your current situation?</label>
                   <p class="form-field-hint">Examples: employed, between jobs, career transition, etc.</p>
-                  <input class="form-text-field-styled w-input" maxlength="256" name="Situation" data-name="Situation" placeholder="Tell us about your current situation" type="text" id="Situation">
+                  <input class="form-text-field-styled w-input" maxlength="256" name="situation" placeholder="Tell us about your current situation" type="text" id="situation">
                 </div>
 
                 <div class="column-x-small-4">
                   <label for="business-idea" class="form-field-label-styled">Do you have a business idea you want to launch, or are you exploring options?</label>
-                  <textarea id="business-idea" name="business-idea" maxlength="5000" data-name="Business Idea" placeholder="Share your thoughts..." class="form-text-field-styled text-area-styled w-input"></textarea>
+                  <textarea id="business-idea" name="business-idea" maxlength="5000" placeholder="Share your thoughts..." class="form-text-field-styled text-area-styled w-input"></textarea>
                 </div>
 
                 <div class="column-x-small-4">
                   <label for="challenge" class="form-field-label-styled">What's your biggest challenge or fear about starting a business?</label>
-                  <textarea id="challenge" name="challenge" maxlength="5000" data-name="Challenge" placeholder="Be honest - there are no wrong answers" class="form-text-field-styled text-area-styled w-input"></textarea>
+                  <textarea id="challenge" name="challenge" maxlength="5000" placeholder="Be honest - there are no wrong answers" class="form-text-field-styled text-area-styled w-input"></textarea>
                 </div>
 
                 <div class="column-x-small-4">
                   <label for="ai-tools" class="form-field-label-styled">Have you used any AI tools before? If yes, which ones?</label>
                   <p class="form-field-hint">This helps us understand your starting point - not a disqualifier!</p>
-                  <textarea id="ai-tools" name="ai-tools" maxlength="5000" data-name="AI Tools" placeholder="ChatGPT, Claude, Midjourney, etc." class="form-text-field-styled text-area-styled w-input"></textarea>
+                  <textarea id="ai-tools" name="ai-tools" maxlength="5000" placeholder="ChatGPT, Claude, Midjourney, etc." class="form-text-field-styled text-area-styled w-input"></textarea>
                 </div>
 
                 <div class="column-x-small-4">
                   <label for="why-now" class="form-field-label-styled">Why now? What makes this the right time for you to join?</label>
-                  <textarea id="why-now" name="why-now" maxlength="5000" data-name="Why Now" placeholder="What's motivating you right now?" class="form-text-field-styled text-area-styled w-input"></textarea>
+                  <textarea id="why-now" name="why-now" maxlength="5000" placeholder="What's motivating you right now?" class="form-text-field-styled text-area-styled w-input"></textarea>
                 </div>
 
                 <div class="column-x-small-4">
                   <label for="commitment" class="form-field-label-styled">On a scale of 1-10, how serious are you about launching a business in the next 90 days?</label>
-                  <input class="form-text-field-styled w-input" maxlength="2" name="Commitment" data-name="Commitment" placeholder="1-10" type="number" min="1" max="10" id="Commitment">
+                  <input class="form-text-field-styled w-input" maxlength="2" name="commitment" placeholder="1-10" type="number" min="1" max="10" id="commitment">
                 </div>
               </div>
 
               <div class="application-form-section">
                 <div class="column-x-small-4">
                   <label for="referral" class="form-field-label-styled">How did you hear about us?</label>
-                  <input class="form-text-field-styled w-input" maxlength="256" name="Referral" data-name="Referral" placeholder="Friend, social media, search, etc." type="text" id="Referral">
+                  <input class="form-text-field-styled w-input" maxlength="256" name="referral" placeholder="Friend, social media, search, etc." type="text" id="referral">
                 </div>
               </div>
               <div class="form-caption">
