@@ -73,7 +73,51 @@
   transition: all 0.3s ease;
 }
 
+/* Desktop positioning for navigation menu */
+@media (min-width: 992px) {
+  .navigation-menu {
+    left: 600px;
+  }
+}
+
+/* Hide mobile-only link on desktop */
+.mobile-only-link {
+  display: none !important;
+}
+
 @media (max-width: 991px) {
+  /* Show mobile-only link on mobile */
+  .mobile-only-link {
+    display: block !important;
+  }
+
+  /* Add padding to FAQ container on mobile */
+  .faq-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* Prevent horizontal scroll on mobile */
+  body {
+    overflow-x: hidden;
+  }
+
+  html {
+    overflow-x: hidden;
+  }
+
+  /* Make logo 25% smaller on mobile/tablet */
+  .navigation-logo {
+    width: 210px !important;
+    max-width: 210px !important;
+  }
+
+  /* Make hero image full width on mobile */
+  .hero-column-middle img {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
   .navigation-wrapper {
     position: relative;
     z-index: 1001;
@@ -913,10 +957,6 @@ a.hero-button,
 .h5-heading.bangers-regular2 {
   font-size: 28px !important;
   letter-spacing: 0 !important;
-}
-
-.navigation-menu {
-  left: 600px;
 }
 
 /* Change inactive FAQ tab borders to black */
