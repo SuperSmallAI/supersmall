@@ -62,6 +62,15 @@
   object-fit: cover;
 }
 
+/* Remove border from container images */
+img[src*="container1.png"],
+img[src*="container2.png"],
+img[src*="container3.png"],
+img[src*="container4.png"],
+img[src*="container5.png"] {
+  border: none !important;
+}
+
 /* Navigation - Remove border from active links */
 .navigation-link.w--current {
   border: none !important;
