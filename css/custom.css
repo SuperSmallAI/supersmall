@@ -59,8 +59,8 @@ body {
 
 /* Navigation logo and button sizing */
 .navigation-logo {
-  width: 280px !important;
-  max-width: 280px !important;
+  width: 300px !important;
+  max-width: 300px !important;
 }
 
 .button-primary-3 .bangers-regular {
@@ -174,8 +174,8 @@ img[src*="container5.png"] {
 
   /* Make logo 25% smaller on mobile/tablet */
   .navigation-logo {
-    width: 210px !important;
-    max-width: 210px !important;
+    width: 240px !important;
+    max-width: 240px !important;
   }
 
   /* Make hero image full width on mobile */
@@ -1135,6 +1135,43 @@ a.hero-button,
 /* Add spacing below the application description paragraph */
 .contact-row p:last-child {
   margin-bottom: 20px !important;
+}
+
+/* Move hero apply button down to overlap yellow background */
+.hero-wrapper .hero-button {
+  margin-top: 40px !important;
+  margin-bottom: -20px !important;
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+/* Center container images on mobile */
+@media (max-width: 991px) {
+  img[src*="container1.png"],
+  img[src*="container2.png"],
+  img[src*="container3.png"],
+  img[src*="container4.png"],
+  img[src*="container5.png"] {
+    display: block !important;
+    margin: 0 auto !important;
+  }
+  
+  /* Ensure feature cards center their content on mobile */
+  .feature-card-2 {
+    text-align: center !important;
+  }
+  
+  /* Reduce white space around SAGE image on mobile */
+  .content-image-wrapper-2-copy {
+    margin-top: -30px !important;
+    margin-bottom: -30px !important;
+  }
+  
+  /* Reduce spacing in the section containing the SAGE image */
+  .section-large-7 {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
 }
 
 
