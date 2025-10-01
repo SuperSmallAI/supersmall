@@ -142,7 +142,7 @@ img[src*="container5.png"] {
 /* Desktop positioning for navigation menu */
 @media (min-width: 992px) {
   .navigation-menu {
-    left: 600px;
+    left: 450px;
   }
 }
 
