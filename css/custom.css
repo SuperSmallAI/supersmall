@@ -1,5 +1,67 @@
 /* Custom styles to replace Webflow JS functionality */
 
+/* Navigation logo and button sizing */
+.navigation-logo {
+  width: 280px !important;
+  max-width: 280px !important;
+}
+
+.button-primary-3 .bangers-regular {
+  font-size: 30px !important;
+}
+
+/* Heading font size */
+.h3-heading-4 {
+  font-size: 40px !important;
+}
+
+/* Apply Now page - remove border radius */
+.form-text-field-styled,
+.text-area-styled,
+.button-primary-11 {
+  border-radius: 0 !important;
+}
+
+/* Make image-cover larger */
+.image-cover._1235 {
+  transform: scale(1.25);
+  transform-origin: center;
+}
+
+/* Hero image - center and make full width when it's the only element */
+.hero-grid {
+  display: flex !important;
+  justify-content: center;
+}
+
+.hero-column-middle {
+  max-width: 100% !important;
+  width: 100% !important;
+  grid-column: 1 / -1;
+}
+
+.hero-column-middle img {
+  width: 62.5%;
+  max-width: 750px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Feature card - first card should be vertical layout */
+#w-node-cbf6af51-d372-fdd2-70d0-e4b33951b5db-0a9c1b6c {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#w-node-cbf6af51-d372-fdd2-70d0-e4b33951b5db-0a9c1b6c .feature-image {
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 /* Navigation - Remove border from active links */
 .navigation-link.w--current {
   border: none !important;
