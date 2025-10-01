@@ -864,3 +864,173 @@ a.hero-button,
   outline: 2px solid #60A5FA !important;
   outline-offset: 2px !important;
 }
+
+/* Neo-brutalist hard shadows for feature cards */
+.feature-card-2 {
+  box-shadow: 8px 8px 0 #000 !important;
+  border: 2px solid #000 !important;
+}
+
+/* Neo-brutalist hard shadows for timeline cards */
+.timeline-card,
+.timeline-card-copy {
+  box-shadow: 8px 8px 0 #000 !important;
+  border: 2px solid #000 !important;
+}
+
+/* Make hero paragraph wider for better line wrapping */
+.hero-paragraph {
+  max-width: 600px !important;
+  width: 100% !important;
+}
+
+/* Neo-brutalist hard shadows for hero image */
+.image-2 {
+  box-shadow: 8px 8px 0 #000 !important;
+  border: 2px solid #000 !important;
+}
+
+/* Standardize all header character spacing to 0 */
+.hero-heading,
+.h3-heading-4,
+.h5-heading,
+.h6-heading-4 {
+  letter-spacing: 0 !important;
+}
+
+/* Ensure all Bangers font elements have 0 character spacing */
+.bangers-regular,
+.bangers-regular2 {
+  letter-spacing: 0 !important;
+}
+
+/* Apply 0 character spacing to Apply Now button */
+.button-primary-3 .bangers-regular {
+  letter-spacing: 0 !important;
+}
+
+/* Make feature card titles larger and ensure 0 letter spacing */
+.h5-heading.bangers-regular2 {
+  font-size: 28px !important;
+  letter-spacing: 0 !important;
+}
+
+.navigation-menu {
+  left: 600px;
+}
+
+/* Change inactive FAQ tab borders to black */
+.faq-tab {
+  border: 2px solid #000 !important;
+}
+
+/* Remove arrow from active FAQ categories */
+.faq-tab.active::before {
+  display: none !important;
+}
+
+/* Change FAQ sidebar "Still Have Questions" box border to black */
+.faq-sidebar-cta {
+  border: 2px solid #000 !important;
+}
+
+/* Apply page contact column styling */
+.contact-column {
+  position: static !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding-top: 0 !important;
+}
+
+/* Thin black outline for apply page input fields */
+.form-text-field-styled,
+.text-area-styled {
+  border: 1px solid #000 !important;
+}
+
+/* Increase size of form section titles on apply page */
+.form-section-heading {
+  font-size: 32px !important;
+}
+
+/* Apply page accordion styling - neo-brutalist style */
+.apply-accordion-section {
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 0;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 24px;
+  padding: 32px;
+  position: relative;
+  box-shadow: 8px 8px 0 #000;
+  box-sizing: border-box;
+}
+
+.apply-accordion-trigger {
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  background: transparent;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Reduce height for inactive accordions */
+.apply-accordion-section:not(.open) {
+  padding: 15px 32px;
+}
+
+.apply-accordion-trigger:hover {
+  background: rgba(0,0,0,0.02);
+}
+
+.apply-accordion-trigger.open .vertical-line {
+  transform: rotate(90deg);
+  opacity: 0;
+}
+
+.apply-accordion-content {
+  padding: 0;
+  padding-top: 8px;
+  border: none;
+  background: transparent;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.apply-accordion-content ul,
+.apply-accordion-content ol {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.apply-accordion-content li {
+  margin-bottom: 8px;
+}
+
+/* Remove HR dividers since each section now has its own card styling */
+.apply-accordion-section + hr {
+  display: none;
+}
+
+/* Align the main heading with Contact Information title */
+.contact-column-small {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+.contact-column-small .column-large-3 {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+/* Add spacing below the application description paragraph */
+.contact-row p:last-child {
+  margin-bottom: 20px !important;
+}
+
+
+
+
