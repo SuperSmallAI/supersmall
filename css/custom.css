@@ -740,3 +740,127 @@
     left: 15px;
   }
 }
+
+/* Neo-Brutalist Button Styles */
+.btn-neo-brutalist {
+  background-color: #903444;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 2px solid #000;
+  border-radius: 0;
+  box-shadow: 6px 6px 0 #000;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-family: inherit;
+  position: relative;
+}
+
+/* Size variants */
+.btn-neo-brutalist.btn-sm {
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.btn-neo-brutalist.btn-md {
+  padding: 12px 24px;
+  font-size: 16px;
+}
+
+.btn-neo-brutalist.btn-lg {
+  padding: 16px 32px;
+  font-size: 18px;
+}
+
+/* Hover state */
+.btn-neo-brutalist:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0 #000;
+}
+
+/* Active/pressed state */
+.btn-neo-brutalist:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+
+/* Focus state */
+.btn-neo-brutalist:focus {
+  outline: 2px solid #60A5FA;
+  outline-offset: 2px;
+}
+
+/* Remove default button styles when applied to button element */
+button.btn-neo-brutalist {
+  border: 2px solid #000;
+  background-color: #903444;
+}
+
+/* Ensure sharp corners with high specificity */
+.btn-neo-brutalist,
+a.btn-neo-brutalist,
+button.btn-neo-brutalist,
+.btn-neo-brutalist.btn-sm,
+.btn-neo-brutalist.btn-md,
+.btn-neo-brutalist.btn-lg {
+  border-radius: 0 !important;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+}
+
+/* Apply neo-brutalist styles to existing button classes */
+.hero-button,
+.hero-button.w-button,
+.button-primary-3,
+.button-primary-11 {
+  background-color: #903444 !important;
+  color: white !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  border: 2px solid #000 !important;
+  border-radius: 0 !important;
+  box-shadow: 6px 6px 0 #000 !important;
+  text-decoration: none !important;
+  transition: all 0.15s ease !important;
+  position: relative !important;
+  padding: 12px 24px !important;
+  font-size: 16px !important;
+}
+
+/* Force square corners with higher specificity */
+a.hero-button.w-button,
+a.hero-button,
+.hero-button {
+  border-radius: 0 !important;
+}
+
+/* Hover states for existing buttons */
+.hero-button:hover,
+.hero-button.w-button:hover,
+.button-primary-3:hover,
+.button-primary-11:hover {
+  transform: translate(-1px, -1px) !important;
+  box-shadow: 5px 5px 0 #000 !important;
+  background-color: #903444 !important;
+  color: white !important;
+}
+
+/* Active states for existing buttons */
+.hero-button:active,
+.hero-button.w-button:active,
+.button-primary-3:active,
+.button-primary-11:active {
+  transform: translate(2px, 2px) !important;
+  box-shadow: none !important;
+}
+
+/* Focus states for existing buttons */
+.hero-button:focus,
+.hero-button.w-button:focus,
+.button-primary-3:focus,
+.button-primary-11:focus {
+  outline: 2px solid #60A5FA !important;
+  outline-offset: 2px !important;
+}
