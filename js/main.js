@@ -109,38 +109,38 @@ const scrollAnimationObserver = new IntersectionObserver((entries) => {
 
 // Apply animations to different sections
 document.addEventListener('DOMContentLoaded', () => {
-  // Feature card grids - fade up
-  document.querySelectorAll('.feature-card-grid, .feature-cards').forEach(el => {
-    el.classList.add('scroll-fade-up');
-    scrollAnimationObserver.observe(el);
-  });
+  // Feature card grids - fade up (animations disabled)
+  // document.querySelectorAll('.feature-card-grid, .feature-cards').forEach(el => {
+  //   el.classList.add('scroll-fade-up');
+  //   scrollAnimationObserver.observe(el);
+  // });
 
-  // Timeline section - slide from left
-  document.querySelectorAll('.timeline-grid').forEach(el => {
-    el.classList.add('scroll-slide-left');
-    scrollAnimationObserver.observe(el);
-  });
+  // Timeline section - slide from left (animations disabled)
+  // document.querySelectorAll('.timeline-grid').forEach(el => {
+  //   el.classList.add('scroll-slide-left');
+  //   scrollAnimationObserver.observe(el);
+  // });
 
-  // Content grid sections - slide from right
-  document.querySelectorAll('.content-grid').forEach(el => {
-    el.classList.add('scroll-slide-right');
-    scrollAnimationObserver.observe(el);
-  });
+  // Content grid sections - slide from right (animations disabled)
+  // document.querySelectorAll('.content-grid').forEach(el => {
+  //   el.classList.add('scroll-slide-right');
+  //   scrollAnimationObserver.observe(el);
+  // });
 
-  // FAQ section - scale in
-  document.querySelectorAll('.faq-grid').forEach(el => {
-    el.classList.add('stagger-children');
-    scrollAnimationObserver.observe(el);
-  });
+  // FAQ section - scale in (animations disabled)
+  // document.querySelectorAll('.faq-grid').forEach(el => {
+  //   el.classList.add('stagger-children');
+  //   scrollAnimationObserver.observe(el);
+  // });
 
-  // Individual timeline steps - stagger animation
-  document.querySelectorAll('.timeline-column').forEach(el => {
-    el.classList.add('stagger-children');
-    scrollAnimationObserver.observe(el);
-  });
+  // Individual timeline steps - stagger animation (animations disabled)
+  // document.querySelectorAll('.timeline-column').forEach(el => {
+  //   el.classList.add('stagger-children');
+  //   scrollAnimationObserver.observe(el);
+  // });
 
-  // Section headers - rotate in
-  document.querySelectorAll('.section-regular-3, .section-large-7, .section-regular-5').forEach(el => {
-    scrollAnimationObserver.observe(el);
-  });
+  // Section headers - rotate in (animations removed)
+  // document.querySelectorAll('.section-regular-3, .section-large-7, .section-regular-5').forEach(el => {
+  //   scrollAnimationObserver.observe(el);
+  // });
 });

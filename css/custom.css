@@ -1,5 +1,62 @@
 /* Custom styles to replace Webflow JS functionality */
 
+/* Sticky Navigation */
+.navigation-wrapper {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 1000 !important;
+  width: 100% !important;
+  background: white !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1) !important;
+}
+
+/* Add top padding to body to compensate for fixed header */
+body {
+  padding-top: 80px !important;
+}
+
+/* Substack Subscribe Button in Footer */
+.footer-substack-button {
+  background: #903444 !important;
+  color: white !important;
+  padding: 12px 32px !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  border: 2px solid #000 !important;
+  border-radius: 0 !important;
+  box-shadow: 4px 4px 0 #000 !important;
+  font-family: Montserrat, sans-serif !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  display: inline-block !important;
+  transition: all 0.2s ease !important;
+  margin-top: 20px !important;
+}
+
+.footer-substack-button:hover {
+  background: #000 !important;
+  color: white !important;
+  transform: translate(2px, 2px) !important;
+  box-shadow: 2px 2px 0 #000 !important;
+}
+
+/* Reverse colors for buttons in "You Don't Have to Build Alone" section */
+.cta-section-dark .hero-button,
+.cta-section-dark .hero-button.w-button {
+  background-color: white !important;
+  color: #903444 !important;
+  border-color: #000 !important;
+}
+
+.cta-section-dark .hero-button:hover,
+.cta-section-dark .hero-button.w-button:hover {
+  background-color: #903444 !important;
+  color: white !important;
+}
+
 /* Navigation logo and button sizing */
 .navigation-logo {
   width: 280px !important;
