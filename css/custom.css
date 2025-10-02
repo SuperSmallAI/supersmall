@@ -142,7 +142,7 @@ img[src*="container5.png"] {
 /* Desktop positioning for navigation menu */
 @media (min-width: 992px) {
   .navigation-menu {
-    left: 450px;
+    left: 100px;
   }
 }
 
@@ -155,6 +155,11 @@ img[src*="container5.png"] {
   /* Show mobile-only link on mobile */
   .mobile-only-link {
     display: block !important;
+  }
+
+  /* Hide Apply Now button on mobile since it's in the hamburger menu */
+  .navigation-button-group {
+    display: none !important;
   }
 
   /* Add padding to FAQ container on mobile */
