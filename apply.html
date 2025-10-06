@@ -354,25 +354,21 @@
     padding: 20px;
   }
   
-  .comparison-table {
-    font-size: 14px;
+  /* Hide comparison table on mobile and show cards instead */
+  .comparison-section {
+    display: none;
   }
   
-  .comparison-header,
-  .comparison-row {
-    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+  /* Make sure program cards are visible on mobile */
+  #programs {
+    padding-bottom: 40px;
   }
-  
-  .feature-cell,
-  .plan-cell,
-  .plan-tab,
-  .feature-header {
-    padding: 15px 8px;
-    font-size: 12px;
-  }
-  
-  .plan-cell {
-    font-size: 18px;
+}
+
+@media (min-width: 769px) {
+  /* Hide the mobile-only apply now link in nav on desktop */
+  .mobile-only-link {
+    display: none;
   }
 }
 </style>
