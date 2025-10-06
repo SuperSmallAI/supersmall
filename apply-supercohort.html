@@ -11,6 +11,12 @@
   <link href="css/webflow.css" rel="stylesheet" type="text/css">
   <link href="css/super-small-draft.webflow.css" rel="stylesheet" type="text/css">
   <link href="css/custom.css" rel="stylesheet" type="text/css">
+  <style>
+    select.form-text-field-styled {
+      min-height: 50px !important;
+      padding: 12px !important;
+    }
+  </style>
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
@@ -52,8 +58,8 @@
             <a href="index.html" class="navigation-logo-link w-inline-block"><img width="24" sizes="(max-width: 991px) 24px, (max-width: 1439px) 2vw, (max-width: 1919px) 24px, 1vw" alt="" src="images/Untitled-design---2025-09-25T101744.509.png" loading="lazy" srcset="images/Untitled-design---2025-09-25T101744.509-p-500.png 500w, images/Untitled-design---2025-09-25T101744.509-p-800.png 800w, images/Untitled-design---2025-09-25T101744.509-p-1080.png 1080w, images/Untitled-design---2025-09-25T101744.509.png 1350w" class="navigation-logo"></a>
             <nav role="navigation" class="navigation-menu w-nav-menu">
               <a href="instructors.html" class="navigation-link w-nav-link">About</a>
-              <a href="faq.html" class="navigation-link w-nav-link">FAQ</a>
-              <a href="https://supersmallai.substack.com/" target="_blank" class="navigation-link w-nav-link">Join Substack</a>
+              <!-- <a href="faq.html" class="navigation-link w-nav-link">FAQ</a> -->
+              <a href="https://supersmallai.substack.com/" target="_blank" class="navigation-link w-nav-link">Join our Substack Community</a>
               <a href="apply.html" class="navigation-link w-nav-link mobile-only-link">Apply Now</a>
             </nav>
           </div>
@@ -74,7 +80,7 @@
       <div class="contact-left">
         <div class="contact-column">
           <div class="contact-column-small">
-            <h5 class="h5-heading-2 bangers-regular">Apply for SuperCohort</h5>
+            <h5 class="h5-heading-2 bangers-regular">Join the SuperCohort</h5>
             <div class="column-large-3">
               <div class="contact-row">
                 <p class="paragraph-small-16">Join our comprehensive 6-week program to launch your AI-powered business with expert guidance and community support.</p>
@@ -87,7 +93,7 @@
           <!-- Program Overview Accordion -->
           <div class="apply-accordion-section open">
             <div class="faq-question-wrapper apply-accordion-trigger open">
-              <h4 class="h5-heading bangers-regular2">What You'll Get</h4>
+              <h4 class="h5-heading bangers-regular2">What's Included</h4>
               <div class="accordian-icon-wrapper">
                 <div class="horizontal-line"></div>
                 <div class="vertical-line"></div>
@@ -95,15 +101,14 @@
             </div>
             <div class="apply-accordion-content" style="display: block;">
               <div class="paragraph-small-16">
-                <ul>
-                  <li>✅ 6 weeks of intensive training</li>
-                  <li>✅ Personal business launch plan</li>
-                  <li>✅ 1-on-1 coaching sessions</li>
-                  <li>✅ Live website development</li>
-                  <li>✅ Customer validation process</li>
-                  <li>✅ Lead generation system setup</li>
-                  <li>✅ Lifetime community access</li>
-                  <li>✅ Ongoing support & accountability</li>
+                <ul style="list-style: none; padding-left: 0;">
+                  <li>✅ &nbsp;Everything in SuperWorkshop</li>
+                  <li>✅ &nbsp;6 week guided cohort program</li>
+                  <li>✅ &nbsp;Weekly SAGE check-ins with cohort</li>
+                  <li>✅ &nbsp;Weekly drop-in office hours with instructor</li>
+                  <li>✅ &nbsp;Stripe setup to receive payments</li>
+                  <li>✅ &nbsp;Live landing page with payment integration</li>
+                  <li>✅ &nbsp;Free 6 months: Community + Substack + AMAs</li>
                 </ul>
               </div>
             </div>
@@ -114,7 +119,7 @@
           <!-- Pricing Accordion -->
           <div class="apply-accordion-section">
             <div class="faq-question-wrapper apply-accordion-trigger">
-              <h4 class="h5-heading bangers-regular2">Investment</h4>
+              <h4 class="h5-heading bangers-regular2">What It Costs</h4>
               <div class="accordian-icon-wrapper">
                 <div class="horizontal-line"></div>
                 <div class="vertical-line"></div>
@@ -124,8 +129,6 @@
               <ul class="paragraph-small-16">
                 <li><strong>Regular Price:</strong> $1,495</li>
                 <li><strong>Early Bird Special:</strong> $895</li>
-                <li><strong>Payment plans available</strong></li>
-                <li><strong>30-day money-back guarantee</strong></li>
               </ul>
             </div>
           </div>
@@ -242,7 +245,7 @@
                 </div>
               </div>
               <div class="form-caption">
-                <div class="mobile-order-first"><input type="submit" data-wait="Please wait..." class="button-primary-11 w-button" value="APPLY FOR SUPERCOHORT"></div>
+                <div class="mobile-order-first"><input type="submit" data-wait="Please wait..." class="button-primary-11 w-button" value="BUY NOW"></div>
               </div>
             </form>
             <div class="w-form-done">
