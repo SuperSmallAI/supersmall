@@ -11,6 +11,14 @@
   <link href="css/webflow.css" rel="stylesheet" type="text/css">
   <link href="css/super-small-draft.webflow.css" rel="stylesheet" type="text/css">
   <link href="css/custom.css" rel="stylesheet" type="text/css">
+  <style>
+    .contact-form-wrapper {
+      padding-top: 20px !important;
+    }
+    .form-section-heading {
+      margin-top: 0 !important;
+    }
+  </style>
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
@@ -52,8 +60,8 @@
             <a href="index.html" class="navigation-logo-link w-inline-block"><img width="24" sizes="(max-width: 991px) 24px, (max-width: 1439px) 2vw, (max-width: 1919px) 24px, 1vw" alt="" src="images/Untitled-design---2025-09-25T101744.509.png" loading="lazy" srcset="images/Untitled-design---2025-09-25T101744.509-p-500.png 500w, images/Untitled-design---2025-09-25T101744.509-p-800.png 800w, images/Untitled-design---2025-09-25T101744.509-p-1080.png 1080w, images/Untitled-design---2025-09-25T101744.509.png 1350w" class="navigation-logo"></a>
             <nav role="navigation" class="navigation-menu w-nav-menu">
               <a href="instructors.html" class="navigation-link w-nav-link">About</a>
-              <a href="faq.html" class="navigation-link w-nav-link">FAQ</a>
-              <a href="https://supersmallai.substack.com/" target="_blank" class="navigation-link w-nav-link">Join Substack</a>
+              <!-- <a href="faq.html" class="navigation-link w-nav-link">FAQ</a> -->
+              <a href="https://supersmallai.substack.com/" target="_blank" class="navigation-link w-nav-link">Join our Substack Community</a>
               <a href="apply.html" class="navigation-link w-nav-link mobile-only-link">Apply Now</a>
             </nav>
           </div>
@@ -77,7 +85,7 @@
             <h5 class="h5-heading-2 bangers-regular">Join SuperCommunity</h5>
             <div class="column-large-3">
               <div class="contact-row">
-                <p class="paragraph-small-16">Connect with fellow entrepreneurs, get ongoing support, and access exclusive resources for just $89/month.</p>
+                <p class="paragraph-small-16">Connect with fellow entrepreneurs, get ongoing support, and access exclusive resources for just $99/month.</p>
                 <br>
                 <p class="paragraph-small-16">Cancel anytime. Start building your network of like-minded founders today.</p>
               </div>
@@ -95,14 +103,13 @@
             </div>
             <div class="apply-accordion-content" style="display: block;">
               <div class="paragraph-small-16">
-                <ul>
-                  <li>✅ Access to private community forum</li>
-                  <li>✅ Monthly group coaching calls</li>
-                  <li>✅ Resource library & templates</li>
-                  <li>✅ Networking with fellow entrepreneurs</li>
-                  <li>✅ Weekly accountability check-ins</li>
-                  <li>✅ Exclusive member-only events</li>
-                  <li>✅ Direct access to founders</li>
+                <ul style="list-style: none; padding-left: 0;">
+                  <li>✅ &nbsp; Access to private community forum</li>
+                  <li>✅ &nbsp; Monthly group coaching calls</li>
+                  <li>✅ &nbsp; Resource library & templates</li>
+                  <li>✅ &nbsp; Networking with fellow entrepreneurs</li>
+                  <li>✅ &nbsp; Exclusive member-only events</li>
+                  <li>✅ &nbsp; Perfect for curious learners</li>
                 </ul>
               </div>
             </div>
@@ -121,7 +128,7 @@
             </div>
             <div class="apply-accordion-content" style="display: none;">
               <ul class="paragraph-small-16">
-                <li><strong>Monthly:</strong> $89/month</li>
+                <li><strong>Monthly:</strong> $99/month</li>
                 <li><strong>Cancel anytime</strong> - No long-term commitment</li>
                 <li><strong>Full access</strong> to all community features</li>
               </ul>
@@ -177,14 +184,7 @@
 
                 <div class="column-x-small-4">
                   <label for="current-stage" class="form-field-label-styled">What stage are you at with your business?</label>
-                  <select class="form-text-field-styled w-select" name="current-stage" id="current-stage">
-                    <option value="">Select your stage...</option>
-                    <option value="idea">Just have an idea</option>
-                    <option value="validating">Validating my idea</option>
-                    <option value="building">Currently building</option>
-                    <option value="launched">Already launched</option>
-                    <option value="scaling">Looking to scale</option>
-                  </select>
+                  <textarea id="current-stage" name="current-stage" maxlength="500" placeholder="Tell us about your current business stage and what you're working on..." class="form-text-field-styled text-area-styled w-input"></textarea>
                 </div>
 
                 <div class="column-x-small-4">
@@ -198,7 +198,7 @@
                 </div>
               </div>
               <div class="form-caption">
-                <div class="mobile-order-first"><input type="submit" data-wait="Please wait..." class="button-primary-11 w-button" value="JOIN SUPERCOMMUNITY - $89/MONTH"></div>
+                <div class="mobile-order-first"><input type="submit" data-wait="Please wait..." class="button-primary-11 w-button" value="JOIN SUPERCOMMUNITY - $99/MONTH"></div>
               </div>
             </form>
             <div class="w-form-done">
