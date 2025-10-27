@@ -1257,7 +1257,7 @@ a.hero-button,
 }
 
 .testimonial-quote::before {
-  content: '"' !important;
+  content: '" ' !important;
   font-size: 28px !important;
   color: #903444 !important;
   font-weight: bold !important;
