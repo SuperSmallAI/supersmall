@@ -1295,6 +1295,16 @@ a.hero-button,
   font-family: "Montserrat", sans-serif !important;
 }
 
+/* Add more space above hero title on desktop */
+.hero-wrapper {
+  padding-top: 80px !important;
+}
+
+/* Add space below subtitle on desktop */
+.hero-paragraph {
+  margin-bottom: 30px !important;
+}
+
 /* Mobile responsive for logos and testimonials */
 @media (max-width: 991px) {
   .logos-title {
