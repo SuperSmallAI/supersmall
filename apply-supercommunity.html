@@ -69,24 +69,85 @@
     </div>
   </div>
   <section class="section-2x-small" style="padding-top: 120px;">
-    <div class="container-regular-8" style="max-width: 800px; margin: 0 auto;">
+    <div class="container-regular-8" style="max-width: 1200px; margin: 0 auto;">
       
       <!-- Hero Section -->
       <div style="text-align: center; margin-bottom: 40px;">
-        <h1 class="h3-heading-4 bangers-regular" style="font-size: 48px; margin-bottom: 20px;">Join SuperCommunity</h1>
-        <p class="paragraph-x-large-3" style="max-width: 600px; margin: 0 auto;">Connect with fellow entrepreneurs, get ongoing support, and access exclusive resources for just <strong>$99 / month</strong>. Cancel anytime.</p>
+        <h1 class="h3-heading-4 bangers-regular" style="font-size: 48px; margin-bottom: 20px;">Join the SuperCommunity</h1>
+        <p class="paragraph-x-large-3" style="max-width: 600px; margin: 0 auto;">Feeling stuck? Don't build alone. Join founders validating demand before making pricey mistakes. Let's make your ideas real together!</p>
       </div>
 
-      <!-- What's Included Section -->
-      <div style="background: #fff; border: 2px solid #000; box-shadow: 8px 8px 0 #000; padding: 40px; margin-bottom: 60px;">
-        <h2 class="h5-heading bangers-regular2" style="text-align: center; margin-bottom: 30px; font-size: 32px;">What's Included</h2>
-        <ul style="list-style: none; padding-left: 0; max-width: 600px; margin: 0 auto;">
-          <li style="margin-bottom: 16px; font-size: 18px;">✅ &nbsp; Monthly workshop to test and build your ideas.</li>
-          <li style="margin-bottom: 16px; font-size: 18px;">✅ &nbsp; Monthly member-only webinar explores AI tools, interviews with experts, and interviews with builders.</li>
-          <li style="margin-bottom: 16px; font-size: 18px;">✅ &nbsp; Monthly AMA with Boaz and David to answer your toughest startup questions.</li>
-          <li style="margin-bottom: 16px; font-size: 18px;">✅ &nbsp; Access to all recordings and all our Substack comment plus our growing SuperPrompt library.</li>
-          <li style="margin-bottom: 30px; font-size: 18px;">✅ &nbsp; Supportive founder community for collaboration and accountability in a safe space.</li>
-        </ul>
+      <!-- Desktop Two-Column Layout: Benefits Left, Form Right -->
+      <div style="display: grid; grid-template-columns: 500px 1fr; gap: 40px; margin-bottom: 60px;" class="desktop-two-column">
+        
+        <!-- Left Column: What's Included -->
+        <div style="background: #fff; border: 2px solid #000; box-shadow: 8px 8px 0 #000; padding: 40px;">
+          <p style="text-align: center; margin-bottom: 25px; font-size: 16px; line-height: 1.5; font-family: 'Montserrat', sans-serif;">Get your startup questions answered live by Boaz and David personally during monthly AMA's (ask me anything) webinars.</p>
+          <p style="text-align: center; margin-bottom: 30px; font-size: 16px; font-weight: 600; color: #903444; font-family: 'Montserrat', sans-serif;">Normally $499 worth of workshops and coaching, yours for $99 per month.</p>
+          <h2 class="h5-heading bangers-regular2" style="text-align: center; margin-bottom: 30px; font-size: 32px;">What's Included</h2>
+          
+          <ul style="list-style: none; padding-left: 0;">
+            <li style="margin-bottom: 16px; font-size: 18px; font-family: 'Montserrat', sans-serif;">✅ &nbsp; Monthly workshop to test and build your ideas.</li>
+            <li style="margin-bottom: 16px; font-size: 18px; font-family: 'Montserrat', sans-serif;">✅ &nbsp; Monthly member-only webinar explores AI tools, interviews with experts, and interviews with builders.</li>
+            <li style="margin-bottom: 16px; font-size: 18px; font-family: 'Montserrat', sans-serif;">✅ &nbsp; Monthly AMA with Boaz and David to answer your toughest startup questions.</li>
+            <li style="margin-bottom: 16px; font-size: 18px; font-family: 'Montserrat', sans-serif;">✅ &nbsp; Access to all recordings and all our Substack comment plus our growing SuperPrompt library.</li>
+            <li style="margin-bottom: 30px; font-size: 18px; font-family: 'Montserrat', sans-serif;">✅ &nbsp; Supportive founder community for collaboration and accountability in a safe space.</li>
+          </ul>
+          
+          <hr style="border: none; border-top: 2px solid #000; width: 60%; margin: 25px auto 20px auto;">
+          
+          <p style="text-align: center; margin-bottom: 15px; font-size: 16px; line-height: 1.5; font-family: 'Montserrat', sans-serif;">For monthly subscriptions, cancel anytime. No contracts or pressure, just progress.</p>
+          <p style="text-align: center; margin-bottom: 0; font-size: 16px; font-weight: 600; color: #903444; font-family: 'Montserrat', sans-serif;">Join the SuperCommunity today and keep the momentum going!</p>
+        </div>
+
+        <!-- Right Column: Form Section -->
+        <div style="background: #fff; border: 2px solid #000; box-shadow: 8px 8px 0 #000; padding: 40px;">
+          <h2 class="h5-heading bangers-regular2" style="text-align: center; margin-bottom: 30px; font-size: 32px;">Ready to Join?</h2>
+          
+          <div class="form-block w-form">
+            <form name="supercommunity-signup" method="POST" netlify action="/form-success.html">
+              <!-- Hidden field for Netlify -->
+              <input type="hidden" name="form-name" value="supercommunity-signup" />
+              <!-- Stripe redirect URL -->
+              <input type="hidden" name="stripe-url" value="https://buy.stripe.com/supercommunity89" />
+              
+              <div style="margin-bottom: 20px;">
+                <label for="name" class="form-field-label-styled">Your Name <span class="required-star">*</span></label>
+                <input class="form-text-field-styled w-input" maxlength="256" name="name" placeholder="John Doe" type="text" id="name" required>
+              </div>
+              
+              <div style="margin-bottom: 20px;">
+                <label for="email" class="form-field-label-styled">Email <span class="required-star">*</span></label>
+                <input class="form-text-field-styled w-input" maxlength="256" name="email" placeholder="you@example.com" type="email" id="email" required>
+              </div>
+
+              <div style="margin-bottom: 20px;">
+                <label for="current-stage" class="form-field-label-styled">What stage are you at with your business?</label>
+                <textarea id="current-stage" name="current-stage" maxlength="500" placeholder="Tell us about your current business stage and what you're working on..." class="form-text-field-styled text-area-styled w-input"></textarea>
+              </div>
+
+              <div style="margin-bottom: 20px;">
+                <label for="goals" class="form-field-label-styled">What are you hoping to get from the community?</label>
+                <textarea id="goals" name="goals" maxlength="5000" placeholder="Accountability, networking, feedback, etc." class="form-text-field-styled text-area-styled w-input"></textarea>
+              </div>
+
+              <div style="margin-bottom: 30px;">
+                <label for="referral" class="form-field-label-styled">How did you hear about us?</label>
+                <input class="form-text-field-styled w-input" maxlength="256" name="referral" placeholder="Friend, social media, search, etc." type="text" id="referral">
+              </div>
+              
+              <div style="text-align: center;">
+                <input type="submit" data-wait="Please wait..." class="button-primary-11 w-button" value="JOIN SUPERCOMMUNITY - $99/MONTH" style="font-size: 16px; padding: 14px 28px;">
+              </div>
+            </form>
+            <div class="w-form-done">
+              <div>Thank you! Your submission has been received!</div>
+            </div>
+            <div class="w-form-fail">
+              <div>Oops! Something went wrong while submitting the form.</div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Social Proof Section -->
@@ -126,54 +187,11 @@
         </div>
       </div>
 
-      <!-- Form Section -->
-      <div style="background: #fff; border: 2px solid #000; box-shadow: 8px 8px 0 #000; padding: 40px; margin-bottom: 120px;">
-        <h2 class="h5-heading bangers-regular2" style="text-align: center; margin-bottom: 30px; font-size: 32px;">Ready to Join?</h2>
-        
-        <div class="form-block w-form">
-          <form name="supercommunity-signup" method="POST" netlify action="/form-success.html" style="max-width: 600px; margin: 0 auto;">
-            <!-- Hidden field for Netlify -->
-            <input type="hidden" name="form-name" value="supercommunity-signup" />
-            <!-- Stripe redirect URL -->
-            <input type="hidden" name="stripe-url" value="https://buy.stripe.com/supercommunity89" />
-            
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
-              <div>
-                <label for="name" class="form-field-label-styled">Your Name <span class="required-star">*</span></label>
-                <input class="form-text-field-styled w-input" maxlength="256" name="name" placeholder="John Doe" type="text" id="name" required>
-              </div>
-              <div>
-                <label for="email" class="form-field-label-styled">Email <span class="required-star">*</span></label>
-                <input class="form-text-field-styled w-input" maxlength="256" name="email" placeholder="you@example.com" type="email" id="email" required>
-              </div>
-            </div>
-
-            <div style="margin-bottom: 20px;">
-              <label for="current-stage" class="form-field-label-styled">What stage are you at with your business?</label>
-              <textarea id="current-stage" name="current-stage" maxlength="500" placeholder="Tell us about your current business stage and what you're working on..." class="form-text-field-styled text-area-styled w-input"></textarea>
-            </div>
-
-            <div style="margin-bottom: 20px;">
-              <label for="goals" class="form-field-label-styled">What are you hoping to get from the community?</label>
-              <textarea id="goals" name="goals" maxlength="5000" placeholder="Accountability, networking, feedback, etc." class="form-text-field-styled text-area-styled w-input"></textarea>
-            </div>
-
-            <div style="margin-bottom: 30px;">
-              <label for="referral" class="form-field-label-styled">How did you hear about us?</label>
-              <input class="form-text-field-styled w-input" maxlength="256" name="referral" placeholder="Friend, social media, search, etc." type="text" id="referral">
-            </div>
-            
-            <div style="text-align: center;">
-              <input type="submit" data-wait="Please wait..." class="button-primary-11 w-button" value="JOIN SUPERCOMMUNITY - $99/MONTH" style="font-size: 18px; padding: 16px 32px;">
-            </div>
-          </form>
-          <div class="w-form-done">
-            <div>Thank you! Your submission has been received!</div>
-          </div>
-          <div class="w-form-fail">
-            <div>Oops! Something went wrong while submitting the form.</div>
-          </div>
-        </div>
+      <!-- Second Call to Action -->
+      <div style="background: #fff; border: 2px solid #000; box-shadow: 8px 8px 0 #000; padding: 40px; margin-bottom: 120px; text-align: center;">
+        <h2 class="h5-heading bangers-regular2" style="margin-bottom: 20px; font-size: 32px;">Ready to Transform Your Business?</h2>
+        <p style="font-size: 18px; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto; font-family: 'Montserrat', sans-serif;">You don't need to do this alone. You saw what's possible, now don't lose the momentum!</p>
+        <input type="button" onclick="document.getElementById('name').scrollIntoView({behavior: 'smooth'})" class="button-primary-11 w-button" value="JOIN SUPERCOMMUNITY - $99/MONTH" style="font-size: 18px; padding: 16px 32px; cursor: pointer;">
       </div>
     </div>
     <div class="background">
