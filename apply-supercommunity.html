@@ -51,15 +51,15 @@
           <div class="navigation-left bangers-regular">
             <a href="index.html" class="navigation-logo-link w-inline-block"><img width="24" sizes="(max-width: 991px) 24px, (max-width: 1439px) 2vw, (max-width: 1919px) 24px, 1vw" alt="" src="images/Untitled-design---2025-09-25T101744.509.png" loading="lazy" srcset="images/Untitled-design---2025-09-25T101744.509-p-500.png 500w, images/Untitled-design---2025-09-25T101744.509-p-800.png 800w, images/Untitled-design---2025-09-25T101744.509-p-1080.png 1080w, images/Untitled-design---2025-09-25T101744.509.png 1350w" class="navigation-logo"></a>
             <nav role="navigation" class="navigation-menu w-nav-menu">
-              <a href="instructors.html" class="navigation-link w-nav-link">About the Founders</a>
-              <!-- <a href="faq.html" class="navigation-link w-nav-link">FAQ</a> -->
-              <a href="apply.html" class="navigation-link w-nav-link mobile-only-link">Apply Now</a>
+              <a href="instructors.html" class="navigation-link w-nav-link mobile-only-link">About the Founders</a>
+              <a href="https://supersmall.substack.com/" target="_blank" class="navigation-link w-nav-link mobile-only-link">JOIN NOW</a>
             </nav>
           </div>
           <div class="navigation-right">
+            <a href="instructors.html" class="navigation-link w-nav-link" style="margin-right: 100px;">About the Founders</a>
             <div class="navigation-button-group">
-              <a href="apply.html" class="button-primary-3 w-inline-block">
-                <div class="bangers-regular">Apply Now</div>
+              <a href="https://supersmall.substack.com/" target="_blank" class="button-primary-3 w-inline-block">
+                <div class="bangers-regular">JOIN NOW</div>
               </a>
             </div>
             <div class="navigation-mobile-menu w-nav-button"><img loading="lazy" src="images/Icon-Menu.svg" alt="" class="icon-regular"></div>
@@ -105,11 +105,9 @@
           <h2 class="h5-heading bangers-regular2" style="text-align: center; margin-bottom: 30px; font-size: 32px;">Ready to Join?</h2>
           
           <div class="form-block w-form">
-            <form name="supercommunity-signup" method="POST" netlify action="/form-success.html">
+            <form name="supercommunity-signup" id="supercommunity-form" method="POST" netlify>
               <!-- Hidden field for Netlify -->
               <input type="hidden" name="form-name" value="supercommunity-signup" />
-              <!-- Stripe redirect URL -->
-              <input type="hidden" name="stripe-url" value="https://buy.stripe.com/supercommunity89" />
               
               <div style="margin-bottom: 20px;">
                 <label for="name" class="form-field-label-styled">Your Name <span class="required-star">*</span></label>
@@ -137,7 +135,7 @@
               </div>
               
               <div style="text-align: center;">
-                <input type="submit" data-wait="Please wait..." class="button-primary-11 w-button" value="JOIN SUPERCOMMUNITY - $99/MONTH" style="font-size: 16px; padding: 14px 28px;">
+                <button type="submit" class="button-primary-11 w-button" style="font-size: 16px; padding: 14px 28px; border: none; cursor: pointer;">JOIN SUPERCOMMUNITY - $99/MONTH</button>
               </div>
             </form>
             <div class="w-form-done">
@@ -254,8 +252,55 @@
   </section>
   <script src="js/main.js" type="text/javascript"></script>
   <script>
-    // Apply page accordion functionality
+    // SuperCommunity form submission
     document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('supercommunity-form');
+      
+      if (form) {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          // Get form data
+          const formData = new FormData(form);
+          
+          // Submit to Netlify first
+          fetch('/', {
+            method: 'POST',
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData).toString()
+          })
+          .then(() => {
+            // Success - show message and redirect to Stripe
+            const formBlock = document.querySelector('.w-form');
+            const successDiv = document.querySelector('.w-form-done');
+            const failDiv = document.querySelector('.w-form-fail');
+            
+            // Hide form, show success message
+            form.style.display = 'none';
+            failDiv.style.display = 'none';
+            successDiv.style.display = 'block';
+            successDiv.innerHTML = '<div>Thank you! Your information has been saved. Opening payment page...</div>';
+            
+            // Open Stripe in new tab after short delay
+            setTimeout(() => {
+              window.open('https://buy.stripe.com/9B628l0mv8ao1nR6yf4AU01', '_blank');
+            }, 1500);
+          })
+          .catch((error) => {
+            // Error - show error message but still redirect to Stripe
+            console.error('Error:', error);
+            const failDiv = document.querySelector('.w-form-fail');
+            failDiv.style.display = 'block';
+            failDiv.innerHTML = '<div>There was an issue saving your information, but we\'ll still process your payment. Opening payment page...</div>';
+            
+            setTimeout(() => {
+              window.open('https://buy.stripe.com/9B628l0mv8ao1nR6yf4AU01', '_blank');
+            }, 2000);
+          });
+        });
+      }
+      
+      // Apply page accordion functionality (legacy code)
       const accordionTriggers = document.querySelectorAll('.apply-accordion-trigger');
       
       accordionTriggers.forEach(function(trigger) {
