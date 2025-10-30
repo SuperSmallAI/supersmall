@@ -1373,6 +1373,12 @@ a.hero-button,
   .hero-wrapper .hero-paragraph {
     margin-bottom: 40px !important;
   }
+
+  /* Apply page - make two-column layout single column on mobile */
+  .desktop-two-column {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
 }
 
 
