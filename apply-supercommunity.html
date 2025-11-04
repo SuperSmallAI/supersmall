@@ -32,6 +32,123 @@
   font-weight: 300;
   font-style: normal;
 }
+
+/* Hide duplicate logos on desktop */
+.mobile-duplicate-logo {
+  display: none;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .mobile-duplicate-logo {
+    display: block !important;
+  }
+  .desktop-two-column {
+    display: block !important;
+    grid-template-columns: none !important;
+    gap: 0 !important;
+  }
+  
+  .desktop-two-column > div {
+    margin-bottom: 20px !important;
+    box-shadow: 4px 4px 0 #000 !important;
+  }
+  
+  .container-regular-8 {
+    padding: 0 15px !important;
+    max-width: 100% !important;
+  }
+  
+  h1 {
+    font-size: 32px !important;
+  }
+  
+  .h5-heading {
+    font-size: 24px !important;
+  }
+  
+  .mobile-logos-container {
+    overflow: hidden !important;
+    width: 100% !important;
+  }
+  
+  .mobile-logos-grid {
+    display: flex !important;
+    gap: 40px !important;
+    padding: 20px 0 !important;
+    width: fit-content !important;
+    animation: logoScrollRightToLeft 25s infinite linear !important;
+  }
+  
+  .mobile-logos-grid > div {
+    flex: 0 0 auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    min-width: 100px !important;
+  }
+  
+  .mobile-logos-grid img {
+    max-height: 80px !important;
+    width: auto !important;
+    max-width: 120px !important;
+  }
+  
+  /* Mobile button stacking */
+  .mobile-stack-btn {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    line-height: 1.2 !important;
+    margin: 0 auto !important;
+  }
+  
+  .mobile-stack-btn .btn-dash {
+    display: none !important;
+  }
+  
+  .mobile-stack-btn .btn-main {
+    font-weight: bold !important;
+  }
+  
+  .mobile-stack-btn .btn-price {
+    font-size: 0.9em !important;
+    margin-top: 2px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 28px !important;
+  }
+  
+  .h5-heading {
+    font-size: 20px !important;
+  }
+  
+  .container-regular-8 {
+    padding: 0 10px !important;
+    max-width: 100% !important;
+  }
+  
+  .mobile-form-padding {
+    padding: 15px !important;
+  }
+  
+  .desktop-two-column > div {
+    box-shadow: 2px 2px 0 #000 !important;
+  }
+}
+
+/* Keyframe animation for right to left logo scrolling */
+@keyframes logoScrollRightToLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-62.5%);
+  }
+}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CTC12W3EL5"></script>
@@ -69,7 +186,7 @@
     </div>
   </div>
   <section class="section-2x-small" style="padding-top: 120px;">
-    <div class="container-regular-8" style="max-width: 1200px; margin: 0 auto;">
+    <div class="container-regular-8" style="max-width: 1200px; margin: 0 auto; padding: 0 40px;">
       
       <!-- Hero Section -->
       <div style="text-align: center; margin-bottom: 40px;">
@@ -81,7 +198,7 @@
       <div id="form-section" style="display: grid; grid-template-columns: 500px 1fr; gap: 40px; margin-bottom: 60px;" class="desktop-two-column">
         
         <!-- Left Column: What's Included -->
-        <div style="background: #fff; border: 2px solid #000; box-shadow: 8px 8px 0 #000; padding: 40px;">
+        <div class="mobile-form-padding" style="background: #fff; border: 2px solid #000; box-shadow: 8px 8px 0 #000; padding: 40px;">
           <p style="text-align: center; margin-bottom: 25px; font-size: 16px; line-height: 1.5; font-family: 'Montserrat', sans-serif;">Get your startup questions answered live by Boaz and David personally during monthly AMA's (ask me anything) webinars.</p>
           <p style="text-align: center; margin-bottom: 30px; font-size: 16px; font-weight: 600; color: #903444; font-family: 'Montserrat', sans-serif;">Normally $499 worth of workshops and coaching, yours for $99 per month.</p>
           <h2 class="h5-heading bangers-regular2" style="text-align: center; margin-bottom: 30px; font-size: 32px;">What's Included</h2>
@@ -153,7 +270,7 @@
         </div>
 
         <!-- Right Column: Form Section -->
-        <div style="background: #fff; border: 2px solid #000; box-shadow: 8px 8px 0 #000; padding: 40px;">
+        <div class="mobile-form-padding" style="background: #fff; border: 2px solid #000; box-shadow: 8px 8px 0 #000; padding: 40px;">
           <h2 id="ready-to-join-title" class="h5-heading bangers-regular2" style="text-align: center; margin-bottom: 30px; font-size: 32px;">Ready to Join?</h2>
           
           <div class="form-block w-form">
@@ -309,7 +426,9 @@
               </div>
               
               <div style="text-align: center;">
-                <button type="submit" class="button-primary-11 w-button" style="font-size: 16px; padding: 14px 28px; border: none; cursor: pointer;">JOIN SUPERCOMMUNITY - $99/MONTH</button>
+                <button type="submit" class="button-primary-11 w-button mobile-stack-btn" style="font-size: 16px; padding: 14px 28px; border: none; cursor: pointer;">
+                  <span class="btn-main">JOIN SUPERCOMMUNITY</span><span class="btn-dash"> - </span><span class="btn-price">$99/MONTH</span>
+                </button>
               </div>
             </form>
             <div class="w-form-done">
@@ -329,21 +448,33 @@
         <!-- Customer Logos -->
         <div style="text-align: center; margin-bottom: 60px;">
           <h3 class="logos-title bangers-regular" style="margin-bottom: 70px; font-size: 32px;">Building with Forward-Thinking Organizations</h3>
-          <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 30px; align-items: center; justify-items: center; padding-top: 30px;">
-            <div>
-              <img src="images/logo-sba.png" alt="SBA Logo" style="max-height: 60px; width: auto;">
-            </div>
-            <div>
-              <img src="images/logo-chamber.png" alt="Chamber Logo" style="max-height: 60px; width: auto;">
-            </div>
-            <div>
-              <img src="images/logo-ai-house.png" alt="AI House Logo" style="max-height: 60px; width: auto;">
-            </div>
-            <div>
-              <img src="images/logo-therainierclub.png" alt="The Rainier Club Logo" style="max-height: 60px; width: auto;">
-            </div>
-            <div>
-              <img src="images/logo-eo.png" alt="EO Logo" style="max-height: 60px; width: auto;">
+          <div class="mobile-logos-container" style="overflow: hidden; width: 100%;">
+            <div class="mobile-logos-grid" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 30px; align-items: center; justify-items: center; padding-top: 30px;">
+              <div>
+                <img src="images/logo-sba.png" alt="SBA Logo" style="max-height: 60px; width: auto;">
+              </div>
+              <div>
+                <img src="images/logo-chamber.png" alt="Chamber Logo" style="max-height: 60px; width: auto;">
+              </div>
+              <div>
+                <img src="images/logo-ai-house.png" alt="AI House Logo" style="max-height: 60px; width: auto;">
+              </div>
+              <div>
+                <img src="images/logo-therainierclub.png" alt="The Rainier Club Logo" style="max-height: 60px; width: auto;">
+              </div>
+              <div>
+                <img src="images/logo-eo.png" alt="EO Logo" style="max-height: 60px; width: auto;">
+              </div>
+              <!-- Duplicate logos for seamless loop - mobile only -->
+              <div class="mobile-duplicate-logo">
+                <img src="images/logo-sba.png" alt="SBA Logo" style="max-height: 60px; width: auto;">
+              </div>
+              <div class="mobile-duplicate-logo">
+                <img src="images/logo-chamber.png" alt="Chamber Logo" style="max-height: 60px; width: auto;">
+              </div>
+              <div class="mobile-duplicate-logo">
+                <img src="images/logo-ai-house.png" alt="AI House Logo" style="max-height: 60px; width: auto;">
+              </div>
             </div>
           </div>
         </div>
@@ -392,7 +523,9 @@
       <div style="background: #fff; border: 2px solid #000; box-shadow: 8px 8px 0 #000; padding: 40px; margin-bottom: 120px; text-align: center;">
         <h2 class="h5-heading bangers-regular2" style="margin-bottom: 20px; font-size: 32px;">Ready to Transform Your Business?</h2>
         <p style="font-size: 18px; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto; font-family: 'Montserrat', sans-serif;">You don't need to do this alone. You saw what's possible, now don't lose the momentum!</p>
-        <input type="button" onclick="document.getElementById('join-supercommunity-title').scrollIntoView({behavior: 'smooth'})" class="button-primary-11 w-button" value="JOIN SUPERCOMMUNITY - $99/MONTH" style="font-size: 18px; padding: 16px 32px; cursor: pointer;">
+        <button type="button" onclick="document.getElementById('join-supercommunity-title').scrollIntoView({behavior: 'smooth'})" class="button-primary-11 w-button mobile-stack-btn" style="font-size: 18px; padding: 16px 32px; cursor: pointer;">
+          <span class="btn-main">JOIN SUPERCOMMUNITY</span><span class="btn-dash"> - </span><span class="btn-price">$99/MONTH</span>
+        </button>
       </div>
     </div>
     <div class="background">
