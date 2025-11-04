@@ -191,6 +191,7 @@
       <!-- Hero Section -->
       <div style="text-align: center; margin-bottom: 40px;">
         <h1 id="join-supercommunity-title" class="h3-heading-4 bangers-regular" style="font-size: 48px; margin-bottom: 20px;">Join the SuperCommunity</h1>
+        <div id="desktop-scroll-target" style="padding-top: 20px; margin-top: -20px;"></div>
         <p class="paragraph-x-large-3" style="max-width: 600px; margin: 0 auto;">Feeling stuck? Don't build alone. Join founders validating demand before making pricey mistakes. Let's make your ideas real together!</p>
       </div>
 
@@ -262,7 +263,7 @@
               <div style="font-weight: 600; font-size: 12px; font-family: 'Montserrat', sans-serif; color: #903444;">— Anonymous, SBA Masterclass participant</div>
             </div>
             
-            <div id="form-scroll-target" style="padding-top: 10px;"></div>
+            <div id="mobile-scroll-target" style="padding-top: 20px; margin-top: -20px;"></div>
             <div style="background: #f9fafb; border: 2px solid #000; padding: 20px; box-shadow: 4px 4px 0 #000;">
               <p style="font-style: italic; margin: 0 0 12px 0; font-size: 14px; line-height: 1.4; font-family: 'Montserrat', sans-serif; font-weight: bold;">"This was an eye opener — very friendly and approachable."</p>
               <div style="font-weight: 600; font-size: 12px; font-family: 'Montserrat', sans-serif; color: #903444;">— Anonymous, SBA Masterclass participant</div>
@@ -616,8 +617,13 @@
             successDiv.style.display = 'block';
             successDiv.innerHTML = '<div>Thank you for your application! We\'ll personally review your submission and reach out with next steps. We\'re excited you\'re interested in joining our SuperCommunity!</div>';
             
-            // Scroll to form area to show thank you message
-            document.getElementById('form-scroll-target').scrollIntoView({behavior: 'smooth'});
+            // Change title to thank you message
+            document.getElementById('ready-to-join-title').textContent = 'THANK YOU FOR YOUR SUBMISSION';
+            
+            // Scroll to appropriate target based on device
+            const isMobile = window.innerWidth <= 768;
+            const targetId = isMobile ? 'mobile-scroll-target' : 'desktop-scroll-target';
+            document.getElementById(targetId).scrollIntoView({behavior: 'smooth'});
             
             // Open Stripe in new tab after delay - TEMPORARILY DISABLED
             // setTimeout(() => {
