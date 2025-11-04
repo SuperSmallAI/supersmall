@@ -37,6 +37,55 @@
   font-weight: 300;
   font-style: normal;
 }
+
+/* Hide duplicate logos on desktop */
+.mobile-duplicate-logo {
+  display: none;
+}
+
+/* Mobile Responsive Styles for Logos */
+@media (max-width: 768px) {
+  .mobile-duplicate-logo {
+    display: block !important;
+  }
+  
+  .mobile-logos-container {
+    overflow: hidden !important;
+    width: 100% !important;
+  }
+  
+  .mobile-logos-grid {
+    display: flex !important;
+    gap: 40px !important;
+    padding: 20px 0 !important;
+    width: fit-content !important;
+    animation: logoScrollRightToLeft 25s infinite linear !important;
+  }
+  
+  .mobile-logos-grid > div {
+    flex: 0 0 auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    min-width: 100px !important;
+  }
+  
+  .mobile-logos-grid img {
+    max-height: 80px !important;
+    width: auto !important;
+    max-width: 120px !important;
+  }
+}
+
+/* Keyframe animation for right to left logo scrolling */
+@keyframes logoScrollRightToLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-62.5%);
+  }
+}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CTC12W3EL5"></script>
@@ -93,21 +142,33 @@
     <div class="container-regular-7">
       <div data-w-id="logos-section" style="opacity:0" class="column-center">
         <h3 class="logos-title bangers-regular" style="margin-bottom: 70px;">Building with Forward-Thinking Organizations</h3>
-        <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 30px; align-items: center; justify-items: center; padding: 30px 0;">
-          <div>
-            <img src="images/logo-sba.png" alt="SBA Logo" style="max-height: 60px; width: auto;">
-          </div>
-          <div>
-            <img src="images/logo-chamber.png" alt="Chamber Logo" style="max-height: 60px; width: auto;">
-          </div>
-          <div>
-            <img src="images/logo-ai-house.png" alt="AI House Logo" style="max-height: 60px; width: auto;">
-          </div>
-          <div>
-            <img src="images/logo-therainierclub.png" alt="The Rainier Club Logo" style="max-height: 60px; width: auto;">
-          </div>
-          <div>
-            <img src="images/logo-eo.png" alt="EO Logo" style="max-height: 60px; width: auto;">
+        <div class="mobile-logos-container" style="overflow: hidden; width: 100%;">
+          <div class="mobile-logos-grid" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 30px; align-items: center; justify-items: center; padding: 30px 0;">
+            <div>
+              <img src="images/logo-sba.png" alt="SBA Logo" style="max-height: 60px; width: auto;">
+            </div>
+            <div>
+              <img src="images/logo-chamber.png" alt="Chamber Logo" style="max-height: 60px; width: auto;">
+            </div>
+            <div>
+              <img src="images/logo-ai-house.png" alt="AI House Logo" style="max-height: 60px; width: auto;">
+            </div>
+            <div>
+              <img src="images/logo-therainierclub.png" alt="The Rainier Club Logo" style="max-height: 60px; width: auto;">
+            </div>
+            <div>
+              <img src="images/logo-eo.png" alt="EO Logo" style="max-height: 60px; width: auto;">
+            </div>
+            <!-- Duplicate logos for seamless loop - mobile only -->
+            <div class="mobile-duplicate-logo">
+              <img src="images/logo-sba.png" alt="SBA Logo" style="max-height: 60px; width: auto;">
+            </div>
+            <div class="mobile-duplicate-logo">
+              <img src="images/logo-chamber.png" alt="Chamber Logo" style="max-height: 60px; width: auto;">
+            </div>
+            <div class="mobile-duplicate-logo">
+              <img src="images/logo-ai-house.png" alt="AI House Logo" style="max-height: 60px; width: auto;">
+            </div>
           </div>
         </div>
       </div>
