@@ -262,6 +262,7 @@
               <div style="font-weight: 600; font-size: 12px; font-family: 'Montserrat', sans-serif; color: #903444;">— Anonymous, SBA Masterclass participant</div>
             </div>
             
+            <div id="form-scroll-target" style="padding-top: 10px;"></div>
             <div style="background: #f9fafb; border: 2px solid #000; padding: 20px; box-shadow: 4px 4px 0 #000;">
               <p style="font-style: italic; margin: 0 0 12px 0; font-size: 14px; line-height: 1.4; font-family: 'Montserrat', sans-serif; font-weight: bold;">"This was an eye opener — very friendly and approachable."</p>
               <div style="font-weight: 600; font-size: 12px; font-family: 'Montserrat', sans-serif; color: #903444;">— Anonymous, SBA Masterclass participant</div>
@@ -407,7 +408,7 @@
                   <div style="margin-bottom: 12px;">
                     <label style="display: flex; align-items: center; cursor: pointer; font-family: 'Montserrat', sans-serif; font-size: 16px;">
                       <input type="radio" name="subscription-option" value="annual-594" required style="margin-right: 8px; transform: scale(1.2);">
-                      $594 a year (50% exclusive discount offer)
+                      $594 a year (50% discount for those who qualify)
                     </label>
                   </div>
                 </div>
@@ -426,9 +427,7 @@
               </div>
               
               <div style="text-align: center;">
-                <button type="submit" class="button-primary-11 w-button mobile-stack-btn" style="font-size: 16px; padding: 14px 28px; border: none; cursor: pointer;">
-                  <span class="btn-main">JOIN SUPERCOMMUNITY</span><span class="btn-dash"> - </span><span class="btn-price">$99/MONTH</span>
-                </button>
+                <button type="submit" class="button-primary-11 w-button" style="font-size: 16px; padding: 14px 28px; border: none; cursor: pointer;">SUBMIT</button>
               </div>
             </form>
             <div class="w-form-done">
@@ -617,8 +616,8 @@
             successDiv.style.display = 'block';
             successDiv.innerHTML = '<div>Thank you for your application! We\'ll personally review your submission and reach out with next steps. We\'re excited you\'re interested in joining our SuperCommunity!</div>';
             
-            // Scroll to Ready to Join section to show thank you message
-            document.getElementById('ready-to-join-title').scrollIntoView({behavior: 'smooth'});
+            // Scroll to form area to show thank you message
+            document.getElementById('form-scroll-target').scrollIntoView({behavior: 'smooth'});
             
             // Open Stripe in new tab after delay - TEMPORARILY DISABLED
             // setTimeout(() => {
